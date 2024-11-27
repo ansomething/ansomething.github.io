@@ -1,0 +1,95 @@
+body {
+    width: 100%;
+    height: 100%;
+    background: #581c63;
+    background: linear-gradient(90deg, #581c63 0%, #2b0f2f 40%, #171721 59%);
+    font-family: 'proxima-soft';
+}
+
+#meu_nome {
+    position: absolute;
+    width: 622px;
+    height: 264px;
+    left: 46px;
+    top: 200px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 88px;
+    letter-spacing: 0.4cm;
+    color: #ffffff;
+    opacity: 70%
+}
+
+#img_background {
+    position: absolute;
+    width: 800px;
+    height: 576px;
+    left: 730px;
+    top: 0px;
+}
+
+.botao {
+    position: absolute;
+    border: 2px solid #FFFFFF;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.04cm;
+    color: #FFFFFF;
+    opacity: 80%;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#inicio {
+    position: absolute;
+    width: fit-content;
+    left: 46px;
+    top: 35px;
+    padding: 10px 30px 10px 30px;
+    text-align: center;
+}
+
+#quem_sou_eu {
+    position: absolute;
+    width: fit-content;
+    left: 190px;
+    top: 35px;
+    padding: 10px 30px 10px 30px;
+    text-align: center;
+}
+
+#curriculo {
+    position: absolute;
+    width: fit-content;
+    left: 410px;
+    top: 35px;
+    padding: 10px 30px 10px 30px;
+    text-align: center;
+}
+
+#contato {
+    position: absolute;
+    width: fit-content;
+    left: 610px;
+    top: 35px;
+    font-size: 18px;
+    padding: 10px 30px 10px 30px;
+    text-align: center;
+}
+
+#bt_linkedin {
+    position: absolute;
+    width: 80px;
+    left: 46px;
+    top: 600px;
+}
+
+#bt_github {
+    position: absolute;
+    width: 80px;
+    left: 150px;
+    top: 600px;
+}
