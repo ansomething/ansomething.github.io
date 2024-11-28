@@ -95,9 +95,9 @@ h3 {
     grid da página sobre
 ---------------------------------------------------------------
 */
-#grid_container {
+#grid_container1 {
     display: grid;
-    grid-template-rows: 1;
+    grid-template-rows: 2;
     grid-template-columns: 2;
     padding: 46px;
     border: 3px solid;
@@ -114,10 +114,9 @@ h3 {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
-    padding-bottom: 100px;
 } #title {
         font-size: 60px;
-    }
+}
 
 #grid2 {
     grid-row-start: 1;
@@ -130,7 +129,7 @@ h3 {
 } #text {
     font-size: 20px;
     margin-top: 90px;
-    }
+}
 
 #grid3 {
     grid-row-start: 1;
@@ -140,10 +139,106 @@ h3 {
     margin-top: 150px;
     margin-left: 50px;
     border-radius: 80px;
-    }
+}
 
 /*
 ---------------------------------------------------------------
     grid da página currículo
 ---------------------------------------------------------------
 */
+#grid_container2 {
+    display: grid;
+    grid-template-rows: 2;
+    grid-template-columns: 2;
+    padding-left: 46px;
+    padding-top: 46px;
+    border: 3px solid;
+    border-top: 0;
+    border-image: linear-gradient(90deg, var(--azul) 0% , var(--roxo) 100%);
+    border-image-slice: 1;
+}
+
+#grid1_1 {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    background: linear-gradient(90deg, var(--ciano) 0%, var(--azul) 10%);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    padding-top: 30px;
+} #linguagens {
+    font-size: 30px;
+}
+
+#grid2_1 {
+    grid-row-start: 1;
+    grid-column-start: 1;
+} #linguagens2 {
+    margin-top: 150px;
+}
+
+#grid3_1 {
+    grid-row-start: 2;
+    grid-column-start: 1;
+    background: linear-gradient(90deg, var(--ciano) 0%, var(--azul) 10%);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    padding-top: 30px;
+} #idiomas {
+    font-size: 30px;
+}
+
+#grid4_1 {
+    grid-row-start: 2;
+    grid-column-start: 1;
+    white-space-collapse: preserve-breaks;
+    color: var(--branco);
+} #idiomas2 {
+    font-size: 25px;
+    margin-top: 70px;
+}
+
+#grid5_1 {
+    grid-row-start: 1;
+    grid-column-start: 2;
+    background: linear-gradient(90deg, var(--ciano) 0%, var(--azul) 10%);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    padding-top: 30px;
+    
+} #formacao {
+    font-size: 30px;
+}
+
+#grid6_1 {
+    grid-row-start: 1;
+    grid-column-start: 2;
+    white-space-collapse: preserve-breaks;
+    color: var(--branco);
+} #formacao2 {
+    font-size: 25px;
+    margin-top: 70px;
+}
+
+#grid7_1 {
+    grid-row-start: 2;
+    grid-column-start: 2;
+    background: linear-gradient(90deg, var(--ciano) 0%, var(--azul) 10%);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+} #skills {
+    font-size: 30px;
+}
+
+#grid8_1 {
+    grid-row-start: 2;
+    grid-column-start: 2;
+    white-space-collapse: preserve-breaks;
+    color: var(--branco);
+} #skills2 {
+    font-size: 25px;
+    margin-top: 70px;
+}
