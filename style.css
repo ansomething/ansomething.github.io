@@ -115,11 +115,9 @@ h3 {
     background-clip: text;
     -webkit-background-clip: text;
     padding-bottom: 100px;
-}
-
-#title {
-    font-size: 60px;
-}
+} #title {
+        font-size: 60px;
+    }
 
 #grid2 {
     grid-row-start: 1;
@@ -129,33 +127,23 @@ h3 {
     letter-spacing: 0.04cm;
     color: var(--branco);
     white-space-collapse: preserve-breaks;
-}
-
-#text {
+} #text {
     font-size: 20px;
     margin-top: 90px;
-}
+    }
 
 #grid3 {
     grid-row-start: 1;
     grid-column-start: 2;
-}
-
-#img_me {
+} #img_me {
     width: 300px;
     margin-top: 150px;
     margin-left: 50px;
     border-radius: 80px;
-}
+    }
 
-# {
-    position: ;
-    border: 3px solid transparent;
-    border-top: 0;
-    border-image: linear-gradient(90deg, var(--azul) 0% , var(--roxo) 100%);
-    border-image-slice: 1;
-    float: left center;
-    width: 100%;
-    height: auto;
-    top: 200px;
-}
+/*
+---------------------------------------------------------------
+    grid da página currículo
+---------------------------------------------------------------
+*/
