@@ -14,6 +14,7 @@ ul {
     padding: 0;
     text-align: center;
     overflow: hidden;
+    list-style-type: none;
 }
 
 li {
@@ -38,7 +39,7 @@ li:hover {
 }
 
 #img_me {
-    position: absolute;
+    position: relative;
     width: 300px;
     left: 1100px;
     top: 200px;
@@ -46,6 +47,11 @@ li:hover {
 }
 
 #about_tab {
+    position: relative;
+    white-space-collapse: preserve-breaks;
+}
+
+#about_title {
     position: relative;
     left: 46px;
     top: 60px;
@@ -64,6 +70,5 @@ li:hover {
     letter-spacing: 0.04cm;
     color: #FFFFFF;
     opacity: 80%;
-    white-space-collapse: preserve-breaks;
-    text-wrap: stable;
+
 }

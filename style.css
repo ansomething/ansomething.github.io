@@ -1,0 +1,109 @@
+body {
+    background: #1f212a;
+    font-family: 'proxima-soft';
+}
+
+:root {
+    --ciano: #45e7fc;
+    --azul: #9064e8;
+    --roxo: #872b97;
+    --branco: #ffffffd0;
+}
+
+ul {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    background-color: #282A35;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    overflow: hidden;
+    list-style-type: none;
+}
+
+li {
+    display: inline-block;
+}
+
+li a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 16px 20px;
+    font-size: 22px;
+    font-weight: 600;
+    background: linear-gradient(90deg, #45e7fc 0%, #9064e8 60% , #872b97 100%);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+li:hover {
+    background-color: #1f212a;
+}
+
+#container {
+    position: relative;
+    top: 250px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 60px;    
+    background: linear-gradient(90deg, var(--ciano) 0%, var(--azul) 60% , var(--roxo) 100%);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+h3 {
+    font-size: 30px;
+    background: linear-gradient(90deg, var(--azul) 0% , var(--roxo) 100%);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+#img_me {
+    position: relative;
+    width: 300px;
+    left: 1100px;
+    top: 200px;
+    border-radius: 80px;
+}
+#about_title {
+    position: absolute;
+    left: 46px;
+    top: 60px;
+    font-size: 60px;
+    background: linear-gradient(90deg, var(--ciano) 0%, var(--azul) 40% , var(--roxo) 70%);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+#border {
+    position: ;
+    border: 3px solid transparent;
+    border-top: 0;
+    border-image: linear-gradient(90deg, var(--azul) 0% , var(--roxo) 100%);
+    border-image-slice: 1;
+    float: left center;
+    width: 100%;
+    height: auto;
+    top: 200px;
+}
+
+#description {
+    height: auto;
+    width: 900px;
+    font-size: 20px;
+    letter-spacing: 0.04cm;
+    color: var(--branco);
+    text-wrap: balance;
+    white-space-collapse: preserve-breaks;
+    margin: 20px;
+    box-sizing: border-box;
+}
