@@ -1,11 +1,13 @@
 /*
 ---------------------------------------------------------------
-    tag body
+    configurações do body
 ---------------------------------------------------------------
 */
 body {
     background: #1f212a;
     font-family: 'proxima-soft';
+    margin: 0;
+    padding: 0;
 }
 
 /*
@@ -25,7 +27,7 @@ body {
     barra de menu
 ---------------------------------------------------------------
 */
-#menu_bar {
+ul {
     position: fixed;
     right: 0;
     left: 0;
@@ -50,8 +52,8 @@ li a {
     display: block;
     text-align: center;
     text-decoration: none;
-    padding: 16px 20px;
-    font-size: 22px;
+    padding: 20px 22px;
+    font-size: 24px;
     font-weight: 600;
     background: linear-gradient(90deg, #45e7fc 0%, #9064e8 60% , #872b97 100%);
     -webkit-text-fill-color: transparent;
@@ -68,7 +70,7 @@ li:hover {
     título h1 e subtítulo h3 da página inicial
 ---------------------------------------------------------------
 */
-#title_container {
+.title {
     position: relative;
     top: 250px;
     text-align: center;
@@ -92,153 +94,169 @@ h3 {
 
 /*
 ---------------------------------------------------------------
-    grid da página sobre
+    layout da página sobre
 ---------------------------------------------------------------
 */
-#grid_container1 {
+#grid_container1 { /* borda da página */
     display: grid;
-    grid-template-rows: 2;
-    grid-template-columns: 2;
-    padding: 46px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 250px 500px;
+    column-gap: 20px;
+    margin: 0;
+    padding-left: 46px;
     border: 3px solid;
     border-top: 0;
     border-image: linear-gradient(90deg, var(--azul) 0% , var(--roxo) 100%);
     border-image-slice: 1;
 }
 
-#grid1 {
-    grid-row-start: 1;
-    grid-column-start: 1;
-    text-align: left 46px;
+.quemsoueu { /* título h2 quem sou eu */
+    grid-area: 1 / 1 / 2 / 2;
     background: linear-gradient(90deg, var(--ciano) 0%, var(--azul) 40% , var(--roxo) 70%);
     -webkit-text-fill-color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
-} #title {
-        font-size: 60px;
+    font-size: 35px;
+    align-self: end;
 }
 
-#grid2 {
-    grid-row-start: 1;
-    grid-column-start: 1;
-    text-align: left;
+.paragrafo1 { /* parágrafo de apresentação */
+    grid-area: 2 / 1 / 3 / 3;
     max-width: 900px;
     letter-spacing: 0.04cm;
     color: var(--branco);
     white-space-collapse: preserve-breaks;
-} #text {
     font-size: 20px;
-    margin-top: 90px;
+    margin-top: -100px;
 }
 
-#grid3 {
-    grid-row-start: 1;
-    grid-column-start: 2;
-} #img_me {
+.img { /* minha foto */
+    grid-area: 1 / 2 / 3 / 3;
+    align-self: center;
+    margin-left: 300px;
+} .img_eu {
     width: 300px;
-    margin-top: 150px;
-    margin-left: 50px;
     border-radius: 80px;
 }
 
 /*
 ---------------------------------------------------------------
-    grid da página currículo
+    layout da página currículo
 ---------------------------------------------------------------
 */
-#grid_container2 {
+#grid_container2 { /* layout e borda da página */
     display: grid;
-    grid-template-rows: 2;
-    grid-template-columns: 2;
-    padding-left: 46px;
-    padding-top: 46px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 500px 250px;
+    padding-left: 70px;
     border: 3px solid;
     border-top: 0;
     border-image: linear-gradient(90deg, var(--azul) 0% , var(--roxo) 100%);
     border-image-slice: 1;
 }
 
-#grid1_1 {
-    grid-row-start: 1;
-    grid-column-start: 1;
-    background: linear-gradient(90deg, var(--ciano) 0%, var(--azul) 10%);
+.item1_1 { /* título h2 linguagens */
+    grid-area: 1 / 1 / 2 / 2;
+    background: linear-gradient(90deg, var(--ciano) 0%, var(--azul) 20%);
     -webkit-text-fill-color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
-    padding-top: 30px;
-} #linguagens {
-    font-size: 30px;
+    font-size: 26px;
+    margin-top: 90px;
+    margin-bottom: 0;
 }
 
-#grid2_1 {
-    grid-row-start: 1;
-    grid-column-start: 1;
-} #linguagens2 {
+.item1_2 { /* imagem com ícones das linguagens */
+    grid-area: 1 / 1 / 2 / 2;
+    margin-top: 210px;
+    margin-bottom: 0;
+}
+
+.item2_1 { /* título h2 idiomas */
+    grid-area: 2 / 1 / 3 / 2;
+    background: linear-gradient(90deg, var(--ciano) 0%, var(--azul) 20%);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 26px;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.item2_2 { /* parágrafo dos idiomas */
+    grid-area: 2 / 1 / 3 / 2;
+    white-space-collapse: preserve-breaks;
+    color: var(--branco);
+    font-size: 22px;
+    margin-top: 80px;
+    margin-bottom: 0;
+}
+
+.item3_1 { /* título h2 formações */
+    grid-area: 1 / 2 / 2 / 3;
+    background: linear-gradient(90deg, var(--ciano) 0%, var(--azul) 20%);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;  
+    font-size: 26px;
+    margin-top: 90px;
+    margin-bottom: 0;
+    margin-left: -100px;
+}
+
+.item3_2 { /* parágrafo das formações */
+    grid-area: 1 / 2 / 2 / 3;
+    white-space-collapse: preserve-breaks;
+    color: var(--branco);
+    font-size: 22px;
     margin-top: 150px;
+    margin-bottom: 0;
+    margin-left: -100px;
 }
 
-#grid3_1 {
-    grid-row-start: 2;
-    grid-column-start: 1;
-    background: linear-gradient(90deg, var(--ciano) 0%, var(--azul) 10%);
+.item4_1 { /* título h2 habilidades */
+    grid-area: 2 / 2 / 3 / 3;
+    background: linear-gradient(90deg, var(--ciano) 0%, var(--azul) 20%);
     -webkit-text-fill-color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
-    padding-top: 30px;
-} #idiomas {
-    font-size: 30px;
+    font-size: 26px;
+    margin-top: -100px;
+    margin-bottom: 0;
+    margin-left: -100px;
 }
 
-#grid4_1 {
-    grid-row-start: 2;
-    grid-column-start: 1;
+.item4_2 { /* parágrafo das habilidades */
+    grid-area: 2 / 2 / 3 / 3;
     white-space-collapse: preserve-breaks;
     color: var(--branco);
-} #idiomas2 {
-    font-size: 25px;
-    margin-top: 70px;
+    font-size: 22px;
+    margin-top: -40px;
+    margin-left: -100px;
 }
 
-#grid5_1 {
-    grid-row-start: 1;
-    grid-column-start: 2;
-    background: linear-gradient(90deg, var(--ciano) 0%, var(--azul) 10%);
+.social {
+    grid-area: 2 / 2 / 3 / 3;
+    background: linear-gradient(90deg, var(--ciano) 0%, var(--azul) 20%);
     -webkit-text-fill-color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
-    padding-top: 30px;
-    
-} #formacao {
-    font-size: 30px;
+    font-size: 26px;
+    margin-top: -100px;
+    margin-left: 300px;
 }
 
-#grid6_1 {
-    grid-row-start: 1;
-    grid-column-start: 2;
-    white-space-collapse: preserve-breaks;
-    color: var(--branco);
-} #formacao2 {
-    font-size: 25px;
-    margin-top: 70px;
-}
-
-#grid7_1 {
-    grid-row-start: 2;
-    grid-column-start: 2;
-    background: linear-gradient(90deg, var(--ciano) 0%, var(--azul) 10%);
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-} #skills {
-    font-size: 30px;
-}
-
-#grid8_1 {
-    grid-row-start: 2;
-    grid-column-start: 2;
-    white-space-collapse: preserve-breaks;
-    color: var(--branco);
-} #skills2 {
-    font-size: 25px;
-    margin-top: 70px;
+/*
+---------------------------------------------------------------
+    layout da página contato
+---------------------------------------------------------------
+*/
+#grid_container3 { /* borda da página */
+    margin: 0;
+    padding: 0;
+    padding-left: 46px;
+    border: 3px solid;
+    border-top: 0;
+    border-image: linear-gradient(90deg, var(--azul) 0% , var(--roxo) 100%);
+    border-image-slice: 1;
 }
