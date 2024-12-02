@@ -9,37 +9,39 @@
     <title>Andressa V. Cavalcante</title>
 </head>
 <body>
-    <nav>
-        <ul>
+    <!-- <div id="flex_geral"> -->
+        <ul id="flex_navbar">
             <li><a href="index0.html">ÍNICIO</a></li>
             <li><a href="index1.html">SOBRE</a></li>
             <li><a href="index2.html">CURRÍCULO</a></li>
             <li><a href="index3.html">CONTATO</a></li>
-        </ul>           
-    </nav>
-
+        </ul>
+    <!-- </div> -->
     <!--<p>Na aba "Currículo", você pode conferir minhas habilidades em algumas linguagens, bem como minhas soft skills. Para acessar meu portfólio completo, visite minha página no GitHub — o link está na aba de "Início".</p>-->
 
-    <div id="grid_container3">
-    <form action="andy.andressa01@gmail.com" method="post" enctype="text/plain">
-        <table id="table_contact">
-            <tr>
-                <td>
-                    E-mail <input type="email">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Mensagem <textarea name="msg" id="msg"></textarea>>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="submit" value="ENVIAR">
-                    <input type="reset" value="APAGAR">
-                </td>
-            </tr>
-    </div>
-            
-        </table>
-    </form>
+    <div id="flex_contact">
+        <form action="andy.andressa01@gmail.com" method="post" enctype="text/plain">
+            <table class="table_contact">
+                <tr>
+                    <thead >
+                        <p class="table_head">Quer me mandar um e-mail?</p>
+                    </thead>
+                    <td>
+                        <p class="tab_email">Seu e-mail</p>
+                        <input id="email" type="email">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="tab_msg">Sua mensagem</p>
+                        <textarea id="msg" name="msg"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input id="bt_enviar" type="submit" value="ENVIAR">
+                    </td>
+                </tr>  
+            </table>
+        </form>
+    </div> 
