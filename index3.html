@@ -21,7 +21,6 @@
     <title>Andressa V. Cavalcante</title>
 </head>
 <body>
-
     <ul id="flex_navbar">
         <li><a href="index.html">ÍNICIO</a></li>
         <li><a href="index1.html">SOBRE</a></li>
@@ -30,46 +29,39 @@
     </ul>
 
     <div id="flex_contact">
-        <form> <!-- formulário para envio do email -->
-            <table class="table_contact"> <!-- tabela para o formulário -->
-                <thead >
-                    <p class="table_head">Gostaria de me mandar um e-mail?</p>
-                </thead>
+        <form> <!-- formulário para envio do email --> 
+            <div id="contact"> <!-- div do formulário -->
 
-                <tr>
-                    <td>
-                        <p class="tab_name">Nome</p>
-                        <input type="text" name="name" id="name">
-                    </td>
-                </tr>
+                <h2 class="table_head">Gostaria de me mandar um e-mail?</h2>
 
-                <tr>    
-                    <td>
-                        <p class="tab_email">E-mail</p>
-                        <input id="email" type="email">
-                    </td>
-                </tr>
+                <div class="tab_name">
+                    <label for="name">Nome</label>
+                    <br>
+                    <input type="text" name="name" id="name">
+                </div>
 
-                <tr>
-                    <td>
-                        <p class="tab_subject">Assunto</p>
-                        <input type="text" name="subject" id="subject">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p class="tab_msg">Mensagem</p>
-                        <textarea id="msg" name="msg"></textarea>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <button id="bt_enviar" type="submit" onclick="sendMail()">ENVIAR</button>
-                    </td>
-                </tr>  
-            </table>
+                <div class="tab_email">
+                    <label for="email">E-mail</label>
+                    <br>
+                    <input type="email" name="email" id="email" >
+                </div>
+                
+                <div class="tab_subject">
+                    <label for="subject">Assunto</label>
+                    <br>
+                    <input type="text" name="subject" id="subject">
+                </div>
+                
+                <div class="tab_message">
+                    <label for="message">Mensagem</label>
+                    <br>
+                    <textarea type="textarea" id="message" name="message"></textarea>
+                </div>
+
+                <button id="button_sub" type="button" onclick="sendMail()">ENVIAR</button>
+            </div>    
         </form>
     </div>
-
+    
 </body>
 </html>

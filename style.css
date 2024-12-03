@@ -127,7 +127,7 @@ h3 {
 #flex_aboutme {
     display: flex;
     row-gap: 10px;
-    flex-flow: column;
+    flex-flow: column wrap;
     justify-content: center;
     align-items: center;
     min-height: 580px;
@@ -229,16 +229,18 @@ p {
 */
 #flex_contact {
     display: flex;
-
+    flex-flow: column wrap;
     justify-content: center;
     align-items: center;
+    min-height: 580px;
 }
 
-.table_contact {
+#contact {
     display: flex;
-    padding: 10px;
+    flex-flow: column wrap;
     justify-content: center;
-    align-items: center;
+    gap: 20px;
+    padding: 20px;
     border: 3px solid;
     border-image: linear-gradient(90deg, var(--roxo) 0%, var(--azul) 60% , var(--ciano)  100%);
     border-image-slice: 1;
@@ -246,92 +248,37 @@ p {
 
 .table_head {
     font-size: 30px;
-    font-weight: 400;
-    text-align: center;
-    margin-top: 20px;
+    font-weight: 500;
+    align-self: center;
     background: linear-gradient(90deg, var(--ciano) 0%, var(--azul) 60% , var(--roxo) 100%);
     -webkit-text-fill-color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
 }
 
-.tab_name {
-    font-size: 26px;
-    font-weight: 400;
+label {
+    font-size: 22px;
+    font-weight: 500;
     margin: 0;
-    background: linear-gradient(90deg, var(--ciano) 0%, var(--azul) 60% , var(--roxo) 100%);
+    background: linear-gradient(90deg, var(--ciano) 30%, var(--azul) 60%, var(--roxo) 100%);
     -webkit-text-fill-color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
 }
 
-.tab_subject {
-    font-size: 26px;
-    font-weight: 400;
-    margin: 0;
-    background: linear-gradient(90deg, var(--ciano) 0%, var(--azul) 60% , var(--roxo) 100%);
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-}
-
-.tab_email {
-    font-size: 26px;
-    font-weight: 400;
-    margin: 0;
-    background: linear-gradient(90deg, var(--ciano) 0%, var(--azul) 60% , var(--roxo) 100%);
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-}
-
-.tab_msg {
-    font-size: 26px;
-    font-weight: 400;
-    margin: 0;
-    background: linear-gradient(90deg, var(--ciano) 0%, var(--azul) 60% , var(--roxo) 100%);
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-}
-
-#name {
-    font-size: 18px;
-    color: #1f212a;
-    text-align: left;
-    background-color: var(--branco);
+input {
+    font-size: 15px;
     width: 300px;
 }
 
-#subject {
-    font-size: 18px;
-    color: #1f212a;
-    text-align: left;
-    background-color: var(--branco);
+textarea {
+    font-size: 15px;
     width: 300px;
-}
-
-#email {
-    font-size: 18px;
-    color: #1f212a;
-    text-align: left;
-    background-color: var(--branco);
-    width: 300px;
-    
-}
-
-#msg {
-    font-size: 18px;
-    color: #1f212a;
-    text-align: left;
-    background-color: var(--branco);
-    padding: 5px;
-    width: 300px;
-    height: 150px;
+    height: 100px;
     resize: none;
 }
 
-#bt_enviar {
+#button_sub {
     display: block;
     margin: 0 auto;
     font-size: 20px;
