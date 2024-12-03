@@ -6,6 +6,6 @@ function sendMail() {
         message : document.getElementById('message').value,
     }
 
-    emailjs.send('service_h2dceel', 'template_eryjwrs', params).then(alert('E-mail enviado!'))
+    emailjs.sendForm('service_h2dceel', 'template_2tqmqpw', params).then(alert('E-mail enviado!'))
     
 }
