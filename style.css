@@ -335,13 +335,10 @@ p {
     display: block;
     margin: 0 auto;
     font-size: 20px;
-    background: linear-gradient(90deg, var(--ciano) 0%, var(--azul) 60% , var(--roxo) 100%);
+    background: linear-gradient(90deg, var(--ciano) 50%, var(--azul) 80%);
     -webkit-text-fill-color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
-}
-
-#bt_enviar:hover {
     cursor: pointer;
 }
 
