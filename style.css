@@ -260,7 +260,7 @@ label {
     font-size: 22px;
     font-weight: 500;
     margin: 0;
-    background: linear-gradient(90deg, var(--ciano) 30%, var(--azul) 60%, var(--roxo) 100%);
+    background: linear-gradient(90deg, var(--ciano) 30%, var(--azul) 70%, var(--roxo) 100%);
     -webkit-text-fill-color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
@@ -268,17 +268,17 @@ label {
 
 input {
     font-size: 15px;
-    width: 300px;
+    width: 100%;
 }
 
 textarea {
     font-size: 15px;
-    width: 300px;
+    width: 100%;
     height: 100px;
     resize: none;
 }
 
-#button_sub {
+#button {
     display: block;
     margin: 0 auto;
     font-size: 20px;
