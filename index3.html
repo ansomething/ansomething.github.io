@@ -6,6 +6,18 @@
     <link class="stylesheet" rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="Imagens/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://use.typekit.net/igy8ywi.css">
+
+    <!-- scripts para o formulário de email ser funcional -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "AUfc-c1CSOYcMWdpJ",
+            });
+        })();
+    </script>
+    <script src="script.js"></script>
     <title>Andressa V. Cavalcante</title>
 </head>
 <body>
@@ -20,24 +32,39 @@
     <div id="flex_contact">
          <form action="andy.andressa01@gmail.com" method="post" enctype="text/plain"> <!-- formulário para envio do email -->
             <table class="table_contact"> <!-- tabela para o formulário -->
+                <thead >
+                    <p class="table_head">Gostaria de me mandar um e-mail?</p>
+                </thead>
+
                 <tr>
-                    <thead >
-                        <p class="table_head">Gostaria de me mandar um e-mail?</p>
-                    </thead>
                     <td>
-                        <p class="tab_email">Seu e-mail</p>
+                        <p class="tab_name">Nome</p>
+                        <input type="text" name="name" id="name">
+                    </td>
+                </tr>
+
+                <tr>    
+                    <td>
+                        <p class="tab_email">E-mail</p>
                         <input id="email" type="email">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p class="tab_subject">Assunto</p>
+                        <input type="text" name="subject" id="subject">
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <p class="tab_msg">Sua mensagem</p>
+                        <p class="tab_msg">Mensagem</p>
                         <textarea id="msg" name="msg"></textarea>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input id="bt_enviar" type="submit" value="ENVIAR">
+                        <input id="bt_enviar" type="submit" value="ENVIAR" onclick="sendMail()">
                     </td>
                 </tr>  
             </table>
