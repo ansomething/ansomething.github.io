@@ -1,0 +1,17 @@
+@media screen and (min-width: 768px) {
+    .nav-bar__links {
+        flex-flow: row nowrap;
+        height: 0;
+        position: inherit;
+    }
+
+    .nav-bar--side {
+        display: block;
+    }
+
+    .menu-btn--open,
+    .menu-btn--close {
+        display: none;
+    }
+
+}

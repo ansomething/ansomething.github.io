@@ -1,47 +1,109 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="shortcut icon" href="assets/img/favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/img/icons/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/media-query.css" media="screen and (max-width: 768px)">
+    <!-- <link rel="stylesheet" href="assets/css/animation.css"> -->
 </head>
 <body>
-    <nav class="nav-bar">
-        <ul class="nav-bar__links">
-            <li><a class="link--bold" href="#home">Home</a></li>
-            <li><a class="link--bold" href="#about">About me</a></li>
-            <li><a class="link--bold" href="#projects">My projects</a></li>
-            <li><a class="link--bold" href="#contact">Contact me</a></li>
-        </ul>
-        
-        <picture class="nav-bar__lang-btn">
-            <p>Choose your language:</p>
-            <a class="lang--flag" href="index-pt-br.html">
-                <img  src="assets/img/brazil.svg" alt="Brazil Flag" width="32" height="32">
-            </a>
-            <a class="lang--flag" href="index.html">
-                <img  src="assets/img/united-states.svg" alt="United States Flag" width="32" height="32">
-            </a>
-        </picture>
-    </nav>
+    <header class="top-header">
+        <nav class="top-header__nav-bar">
+            <button class="nav-bar__menu-btn menu-btn--open" id="menuOn" onclick="menuNav()">
+                <img src="assets/img/buttons/menu.svg" alt="" width="33px" height="33px">
+            </button>
+            
+            <button class="nav-bar__menu-btn menu-btn--close" id="menuOff" onclick="menuNav()">
+                <img src="assets/img/buttons/close.svg" alt="" width="30px" height="30px">
+            </button>
 
-    <header id="#home" class="header">
-        <h1>Hi, welcome to my portfolio</h1>
-        <p>Here you can know a little about me and explore my projects.</p>
-        <p>I'm open to new opportunities and collaborations, so feel free to reach out!</p>
+            <ul class="nav-bar__links nav-bar--side" id="sideBar">
+                <li><a class="link--bold" href="#home">Home</a></li>
+                <li><a class="link--bold" href="#about">About me</a></li>
+                <li><a class="link--bold" href="#projects">My projects</a></li>
+                <li><a class="link--bold" href="#contact">Contact me</a></li>
+            </ul>
+        </nav>
+
+        <div class="lang-picker">
+            <form action="" class="lang-picker__form">
+                <label aria-label="Select your language" for="lang-picker-select"></label>
+                <select name="lang-picker-select" id="lang-picker-select" class="lang-picker-select">
+
+                    <option lang="en" value="english" selected><span class="lang-flag lang-flag--en">.</span>English</option>
+
+                    <option lang="pt" value="português"><span class="lang-flag lang-flag--pt">.</span>Português</option>
+                </select>
+            </form>
+        </div>
+
+
+        <!-- <picture class="header__lang">
+            <div class="lang__choice">
+                <p>Choose your language</p>
+                <button class="choice__btn lang--open" id="langOn" onclick="menuLang()">
+                    <img src="assets/img/buttons/chevron-down.svg" alt="">
+                </button>
+                <button class="choice__btn lang--close" id="langOff" onclick="menuLang()">
+                    <img src="assets/img/buttons/chevron-up.svg" alt="">
+                </button>
+            </div>
+
+            <div class="lang__dropdown" id="langDrop">
+                <a class="lang--flag" href="index-pt-br.html">
+                    <img  src="assets/img/flags/brazil.svg" alt="Brazil Flag" width="32" height="32">
+                </a>
+                <a class="lang--flag" href="index.html">
+                    <img  src="assets/img/flags/united-states.svg" alt="United States Flag" width="32" height="32">
+                </a>
+            </div> 
+        </picture>-->
     </header>
 
-    <main>
-        <section id="about">
+    <main class="main">
+        <section id="home" class="hero">
+            <header>
+                <h1>Hi, welcome to my portfolio</h1>
+                <p>Here you can know a little about me and explore my projects.<br>
+                I'm open to new opportunities and collaborations, so feel free to reach out!</p>
+            </header>
+        </section>
+
+        <aside class="up-down-btn">
+            <button class="up--btn" id="up-btn" aria-label="Move to the top of the page button">
+                <img src="assets/img/buttons/arrow-up-circle-fill.svg" alt="">
+            </button>
+
+            <button class="down--btn" id="down-btn"aria-label="Move to the next section button">
+                <img src="assets/img/buttons/arrow-down-circle-fill.svg" alt="">
+            </button>
+        </aside>
+    
+        <section id="about" class="about">
             <h2>About me</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam mollitia dignissimos placeat, molestias totam quae tempora impedit quidem odio temporibus accusamus provident nihil nesciunt assumenda maiores, aperiam nisi consectetur, magnam atque velit in ex. Dolor itaque enim autem incidunt deserunt expedita, repudiandae accusamus laudantium odio unde libero ullam exercitationem ea voluptas nulla consequuntur voluptatum esse. Praesentium delectus voluptatem temporibus similique autem enim officiis facilis exercitationem ab velit distinctio consequuntur laborum nobis iure hic inventore maiores ipsa deserunt, fugiat minus natus eaque ipsam at? Tenetur ut repellendus laboriosam accusamus! Cupiditate laudantium rerum ratione eius cumque repellendus velit nisi, fugiat veniam est!</p>
 
             <h3>Skills</h3>
-            <div class="container-skills">
+                <div class="slide-track">
+                    <div class="slide-track__slide">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-plain-wordmark.svg" width="100px" height="100px"/>
 
-            </div>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-plain-wordmark.svg" width="100px" height="100px"/>
+
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg" width="100px" height="100px"/>
+
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg" width="90px" height="90px"/>
+
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" width="100px" height="100px"/>
+
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" width="100px" height="100px"/>
+
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg" width="100px" height="100px"/>
+                    </div>
+                </div>
         </section>
 
         <section id="projects">
@@ -62,10 +124,12 @@
     </main>
     <footer class="social">
         <p>Connect with me</p>
-        <ul>
-            <li class="social__links icon--github"><a href="https://github.com/ansomething" target="_blank">GitHub</a></li>
-            <li class="social__links icon--linkedin"><a href="https://www.linkedin.com/in/andressa-vieira-41876532a/" target="_blank">LinkedIn</a></li>
+        <ul class="social__links">
+            <li class="icon--github"><a href="https://github.com/ansomething" target="_blank">GitHub</a></li>
+            <li class="icon--linkedin"><a href="https://www.linkedin.com/in/andressa-vieira-41876532a/" target="_blank">LinkedIn</a></li>
         </ul>
     </footer>
+
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
