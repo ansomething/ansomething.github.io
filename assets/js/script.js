@@ -1,37 +1,19 @@
+// || OPEN AND CLOSE MOBILE MENU BAR
+const initApp = () => {
+    const openBtn = document.getElementById("openBtn");
+    const closeBtn = document.getElementById("closeBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const menuLinks = document.getElementById("menuLinks");
 
+    const toggleMenu = () => {
+        mobileMenu.classList.toggle("hidden");
+        mobileMenu.classList.toggle("flex");
+        openBtn.classList.toggle("hidden");
+    }
 
-// let menuOn = document.getElementById("menuOn");
-// let menuOff = document.getElementById("menuOff");
-// let sideBar = document.getElementById("sideBar");
+    openBtn.addEventListener("click", toggleMenu);
+    closeBtn.addEventListener("click", toggleMenu);
+    menuLinks.addEventListener("click", toggleMenu);
+}
 
-// function menuNav() {
-//     if (menuOn.style.display == "block") {
-//         menuOn.style.display = "none";
-//         menuOff.style.display = "block";
-//         sideBar.style.display = "block";
-        
-//     } else {
-//         menuOn.style.display = "block";
-//         menuOff.style.display = "none";
-//         sideBar.style.display = "none";
-//     }
-// }
-
-// let langOn = document.getElementById("langOn");
-// let langOff = document.getElementById("langOff");
-// let langDrop = document.getElementById("langDrop");
-
-// function menuLang() {
-//     if (langOn.style.display == "block") {
-//         langOn.style.display = "none";
-//         langOff.style.display = "block";
-//         langDrop.style.display = "block";
-//     } else {
-//         langOn.style.display = "block";
-//         langOff.style.display = "none";
-//         langDrop.style.display = "none";
-//     }
-// }
-
-// let slideCopy = document.querySelector('.slide-track__slide').cloneNode(true);
-// document.querySelector('.slide-track').appendChild(slideCopy);
+document.addEventListener("DOMContentLoaded", initApp);

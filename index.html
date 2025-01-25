@@ -1,36 +1,101 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="font-family-nunito">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portfolio</title>
+    <link rel="shortcut icon" href="assets/img/icons/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="src/output.css">
+    <!-- <link rel="stylesheet" href="src/input.css"> -->
     <script src="assets/js/script.js" defer></script>
 </head>
-<body class="min-h-screen ">
-    <header class="h-20 bg-white sticky p-6 top-0 z-10 border border-b-black">
-        <button class="md:hidden float-left" id="openBtn">
+
+<body class="min-h-screen bg-white-new scroll-smooth">
+    <header aria-label="main menu"
+        class="bg-white-new fixed top-0 w-screen p-6 border-b border-b-black hidden md:flex flex-row justify-between">
+
+        <nav class="text-xl flex flex-row gap-10" aria-label="main">
+            <a class="" href="#home">Home</a>
+            <a class="" href="#about">About me</a>
+            <a class="" href="#projects">My projects</a>
+            <a class="" href="#contact">Contact</a>
+        </nav>
+
+        <select class="" aria-label="Select your language">
+            <option lang="en" value="english">English</option>
+            <option lang="pt" value="português">Português</option>
+        </select>
+    </header>
+
+    <header aria-label="mobile menu" class="bg-white-new fixed top-0 w-screen p-6 md:hidden flex-col">
+        <button class="block float-left" id="openBtn">
             <img class="size-10 cursor-pointer" src="assets/img/buttons/menu.svg" alt="">
         </button>
-        <button class="hidden float-left" id="closeBtn">
-            <img class="size-10" src="assets/img/buttons/close.svg" alt="">
-        </button>
-        <nav class="max-w-2xl hidden md:flex flex-column" aria-label="mobile">
-            <ul class="flex flex-col gap-10 text-xl">
-                <li><a class="" href="#home">Home</a></li>
-                <li><a class="" href="#about">About me</a></li>
-                <li><a class="" href="#projects">My projects</a></li>
-                <li><a class="" href="#contact">Contact me</a></li>
-            </ul>
-        </nav>
-        <nav class="max-w-2xl hidden md:flex flex-column" aria-label="main">
-            <ul class="flex flex-row gap-10 text-xl">
-                <li><a class="" href="#home">Home</a></li>
-                <li><a class="" href="#about">About me</a></li>
-                <li><a class="" href="#projects">My projects</a></li>
-                <li><a class="" href="#contact">Contact me</a></li>
-            </ul>
+
+        <nav id="mobileMenu" class="hidden flex-col items-center justify-start min-h-screen text-xl"
+            aria-label="mobile">
+
+            <button class="self-start" id="closeBtn">
+                <img class="size-10 cursor-pointer" src="assets/img/buttons/close.svg" alt="">
+            </button>
+            <section id="menuLinks" class="flex flex-col justify-center">
+                <a class="font-bold p-6 w-full text-center" href="#home">Home</a>
+                <a class="font-extrabold p-6 w-full text-center" href="#about">About me</a>
+                <a class="font-bold p-6 w-full text-center" href="#projects">My projects</a>
+                <a class="font-bold p-6 w-full text-center" href="#contact">Contact me</a>
+            </section>
+            <select id="langSelect" class="p-6 border border-black rounded-xl" aria-label="Select your language">
+                <option id="enLang" lang="en" value="english" onclick="load">English</option>
+                <option id="ptLang" lang="pt" value="português">Português</option>
+            </select>
         </nav>
     </header>
+
+    <main class="max-w-4xl">
+        <section class="bg-green flex flex-col justify-center items-center p-2.5 sm:w-1/2 h-screen">
+            <h1 class="text-white-new md:text-6xl">Hi, welcome to my portfolio</h1>
+            <p class="text-white-new text-xl">Here you can know a little about me and explore my projects.<br>
+                I'm open to new opportunities and collaborations, so feel free to reach out!</p>
+        </section>
+
+        <section id="about" class="about">
+            <h2>About me</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam mollitia dignissimos placeat, molestias
+                totam quae tempora impedit quidem odio temporibus accusamus provident nihil nesciunt assumenda maiores,
+                aperiam nisi consectetur, magnam atque velit in ex. Dolor itaque enim autem incidunt deserunt expedita,
+                repudiandae accusamus laudantium odio unde libero ullam exercitationem ea voluptas nulla consequuntur
+                voluptatum esse. Praesentium delectus voluptatem temporibus similique autem enim officiis facilis
+                exercitationem ab velit distinctio consequuntur laborum nobis iure hic inventore maiores ipsa deserunt,
+                fugiat minus natus eaque ipsam at? Tenetur ut repellendus laboriosam accusamus! Cupiditate laudantium
+                rerum ratione eius cumque repellendus velit nisi, fugiat veniam est!</p>
+
+            <h3>Skills</h3>
+        </section>
+        <section id="projects">
+            <h2>My projects</h2>
+            <ul>
+                <li><a href="https://ansomething.github.io/recipe-page/" target="_blank">Recipe Page</a></li>
+                <li><a href="#" target="_blank">Login Page</a></li>
+                <li><a href="#" target="_blank">#</a></li>
+                <li><a href="#" target="_blank">#</a></li>
+                <li><a href="#" target="_blank">#</a></li>
+                <li><a href="#" target="_blank">#</a></li>
+            </ul>
+        </section>
+
+        <section id="contact">
+
+        </section>
+    </main>
+    <footer class="social">
+        <p>Connect with me</p>
+        <ul class="social__links">
+            <li class="icon--github"><a href="https://github.com/ansomething" target="_blank">GitHub</a></li>
+            <li class="icon--linkedin"><a href="https://www.linkedin.com/in/andressa-vieira-41876532a/"
+                    target="_blank">LinkedIn</a></li>
+        </ul>
+    </footer>
 </body>
+
 </html>
