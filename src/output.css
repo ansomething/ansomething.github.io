@@ -584,11 +584,17 @@
   .end-2 {
     inset-inline-end: calc(var(--spacing) * 2);
   }
+  .top-0 {
+    top: calc(var(--spacing) * 0);
+  }
   .isolate {
     isolation: isolate;
   }
   .isolation-auto {
     isolation: auto;
+  }
+  .z-10 {
+    z-index: 10;
   }
   .z-auto {
     z-index: auto;
@@ -782,8 +788,12 @@
   .aspect-square {
     aspect-ratio: 1 / 1;
   }
-  .h-50 {
-    height: calc(var(--spacing) * 50);
+  .size-10 {
+    width: calc(var(--spacing) * 10);
+    height: calc(var(--spacing) * 10);
+  }
+  .h-20 {
+    height: calc(var(--spacing) * 20);
   }
   .h-screen {
     height: 100vh;
@@ -806,11 +816,11 @@
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
-  .w-50 {
-    width: calc(var(--spacing) * 50);
-  }
   .w-screen {
     width: 100vw;
+  }
+  .max-w-2xl {
+    max-width: var(--container-2xl);
   }
   .max-w-none {
     max-width: none;
@@ -951,6 +961,9 @@
   }
   .animate-none {
     animation: none;
+  }
+  .cursor-pointer {
+    cursor: pointer;
   }
   .touch-pinch-zoom {
     --tw-pinch-zoom: pinch-zoom;
@@ -1217,6 +1230,9 @@
   .justify-items-stretch {
     justify-items: stretch;
   }
+  .gap-10 {
+    gap: calc(var(--spacing) * 10);
+  }
   .space-y-reverse {
     :where(& > :not(:last-child)) {
       --tw-space-y-reverse: 1;
@@ -1310,9 +1326,6 @@
   }
   .rounded {
     border-radius: 0.25rem;
-  }
-  .rounded-full {
-    border-radius: calc(infinity * 1px);
   }
   .rounded-s {
     border-start-start-radius: 0.25rem;
@@ -1422,6 +1435,9 @@
     --tw-border-style: solid;
     border-style: solid;
   }
+  .border-b-black {
+    border-bottom-color: var(--color-black);
+  }
   .bg-\(--my_variable\) {
     background-color: var(--my_variable);
   }
@@ -1437,9 +1453,6 @@
   .bg-\[var\(--my_variable\)\] {
     background-color: var(--my_variable);
   }
-  .bg-blue-600 {
-    background-color: var(--color-blue-600);
-  }
   .bg-red-500 {
     background-color: var(--color-red-500);
   }
@@ -1448,6 +1461,9 @@
   }
   .bg-red-500\/\[50\%\] {
     background-color: color-mix(in oklab, var(--color-red-500) 50%, transparent);
+  }
+  .bg-white {
+    background-color: var(--color-white);
   }
   .-bg-conic {
     --tw-gradient-position: in oklab,;
@@ -1618,6 +1634,9 @@
   .p-1 {
     padding: calc(var(--spacing) * 1);
   }
+  .p-6 {
+    padding: calc(var(--spacing) * 6);
+  }
   .text-center {
     text-align: center;
   }
@@ -1659,6 +1678,10 @@
   }
   .align-top {
     vertical-align: top;
+  }
+  .text-xl {
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
   }
   .leading-none {
     --tw-leading: 1;
@@ -2180,6 +2203,31 @@
   .transform-view {
     transform-box: view-box;
   }
+  .sm\:flex {
+    @media (width >= 40rem) {
+      display: flex;
+    }
+  }
+  .md\:flex {
+    @media (width >= 48rem) {
+      display: flex;
+    }
+  }
+  .md\:hidden {
+    @media (width >= 48rem) {
+      display: none;
+    }
+  }
+}
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+:root {
+  --HIGHLIGHT: #66796b;
+  --WHITE: #f5f5f5;
+  --BLACK: #1b1b1b;
+  --BOXSHADOW: 0 10px 15px #1b1b1b20;
+  --GRADIENT--BEFORE: linear-gradient(to right,  #ffffff 0%,#ffffff00 100%);
+  --GRADIENT--AFTER: linear-gradient(to left, #ffffff 0%, #e7e7e700 100%);
+  --MAINFONT: "Nunito", serif;
 }
 @keyframes spin {
   to {
