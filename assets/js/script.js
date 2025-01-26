@@ -1,14 +1,14 @@
 // || OPEN AND CLOSE MOBILE MENU BAR
 const initApp = () => {
-    const openBtn = document.getElementById("openBtn");
-    const closeBtn = document.getElementById("closeBtn");
-    const mobileMenu = document.getElementById("mobileMenu");
-    const menuLinks = document.getElementById("menuLinks");
+    const openBtn = document.getElementById("open-btn");
+    const closeBtn = document.getElementById("close-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const menuLinks = document.getElementById("menu-links");
 
     const toggleMenu = () => {
-        mobileMenu.classList.toggle("hidden");
-        mobileMenu.classList.toggle("flex");
-        openBtn.classList.toggle("hidden");
+        mobileMenu.classList.toggle("mobile-menu__nav-dropdown--hidden");
+        mobileMenu.classList.toggle("mobile-menu__nav-dropdown--flex");
+        openBtn.classList.toggle("mobile-menu__open-btn--hidden");
     }
 
     openBtn.addEventListener("click", toggleMenu);

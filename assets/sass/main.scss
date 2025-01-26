@@ -1,0 +1,153 @@
+/* || VARIABLES root.scss */
+@import "root";
+
+/* || RESET */
+@import "reset";
+
+/* || GENERAL STYLE */
+html,
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    font-family: $MAIN-FONT;
+    background-color: $WHITE;
+    color: $BLACK;
+    scroll-behavior: smooth;
+    min-height: 100vh;
+}
+
+/* || BLOCKS */
+.mobile-menu {
+    @include FLEX-COL-NOWRAP;
+    align-items: center;
+    justify-content: flex-start;
+    @include NAV-HEADER;
+    border-bottom: 1px solid $BLACK;
+    z-index: 10;
+    background-color: $WHITE;
+}
+
+.main-content {
+    margin-top: 4.10rem;
+}
+
+/* || ELEMENTS */
+.mobile-menu__open-btn {
+    cursor: pointer;
+    padding: .8rem;
+    background-color: $WHITE;
+}
+
+.nav-dropdown__close-btn {
+    align-self: flex-start;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    padding: .8rem;
+    background-color: $WHITE;
+}
+
+.nav-dropdown__links {
+    @include FLEX-COL-NOWRAP;
+    justify-content: center;
+}
+
+.nav__lang-select {
+    padding: 1rem;
+    border: 1px solid $BLACK;
+    border-radius: 15px;
+    width: 10rem;
+    height: 4rem;
+    font-size: $TEXT-SMALL;
+}
+
+.main-content__hero {
+    background-color: $GREEN;
+    text-align: center;
+    color: $WHITE;
+    height: calc(100vh - 65px);
+    @include FLEX-COL-NOWRAP;
+    justify-content: center;
+    scroll-margin-top: 5rem;
+}
+
+.main-content__about {
+    height: calc(100vh - 65px);
+    @include FLEX-COL-NOWRAP;
+    justify-content: center;
+    align-items: center;
+    scroll-margin-top: 4rem;
+}
+
+.about__skills {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+/* || MODIFIERS */
+.mobile-menu__open-btn>img,
+.nav-dropdown__close-btn>img {
+    width: $BTN-MENU;
+    height: $BTN-MENU;
+}
+
+.nav-dropdown__links>a {
+    @include LINKS-MOBILE-MENU;
+    font-size: $MAIN-TITLE-MEDIUM;
+}
+
+.mobile-menu__nav-dropdown--hidden {
+    display: none;
+}
+
+.mobile-menu__nav-dropdown--flex {
+    @include FLEX-COL-NOWRAP;
+    align-items: center;
+    justify-content: space-evenly;
+    min-height: 100vh;
+    background-color: $GREEN;
+    width: 100%;
+}
+
+.mobile-menu__open-btn--hidden {
+    display: none;
+}
+
+.mobile-menu__open-btn--flex {
+    align-self: flex-start;
+    display: flex;
+}
+
+.hero--h1 {
+    font-size: $MAIN-TITLE-LARGE;
+    padding: 2em;
+    padding-top: 0;
+}
+
+.hero--p {
+    font-size: $TEXT-LARGE;
+    padding: 0 2em;
+}
+
+.about--h2 {
+    font-size: $MAIN-TITLE-MEDIUM;
+    padding: 1em;
+}
+
+.about--p {
+    font-size: $TEXT-MEDIUM;
+    width: 80%;
+    text-align: justify;
+}
+
+.about--h3 {
+    font-size: $MAIN-TITLE-SMALL;
+}
+
+.about__skills--card {
+    min-width: 100px;
+    min-height: 100px;
+    border: 1px solid $BLACK;
+    margin: 1rem;
+}

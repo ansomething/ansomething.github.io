@@ -1,0 +1,47 @@
+// || COLORS
+$GREEN: #66796b;
+$WHITE: #f5f5f5;
+$BLACK: #1b1b1b;
+$BOXSHADOW: 0 10px 15px #1b1b1b20;
+$GRADIENT--BEFORE: linear-gradient(to right, #ffffff 0%, #ffffff00 100%);
+$GRADIENT--AFTER: linear-gradient(to left, #ffffff 0%, #e7e7e700 100%);
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+// || FONT
+$MAIN-FONT: "Nunito", serif;
+
+// || SIZES
+$MAIN-TITLE-SMALL: 1.5rem;
+$MAIN-TITLE-MEDIUM: 2rem;
+$MAIN-TITLE-LARGE: 3rem;
+
+$TEXT-SMALL: 1rem;
+$TEXT-MEDIUM: 1.2rem;
+$TEXT-LARGE: 1.5rem;
+
+$BTN-MENU: 2.2rem;
+
+@mixin NAV-HEADER {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+@mixin FLEX-COL-NOWRAP {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+@mixin FLEX-ROW-NOWRAP {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+@mixin LINKS-MOBILE-MENU {
+    color: $WHITE;
+    font-weight: bold;
+    padding: 1.5rem;
+    width: 100%;
+    text-align: center;
+}

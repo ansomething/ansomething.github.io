@@ -1,42 +1,24 @@
 @import "tailwindcss";
 
-@theme {
-  --color-green: #66796b;
-}
-
 @font-face {
   font-family: "Nunito";
   src: url("../assets/fonts/Nunito/Nunito-VariableFont_wght.ttf") format("truetype");
   font-weight: 400 600 800;
 }
 
-.font-family-nunito {
-  font-family: "Nunito", serif;
+:root {
+  --font-nunito: "Nunito", serif;
 }
 
-.font-family-nunito-bold {
-  font-family: "Nunito", serif;
-  font-weight: 600;
+@theme {
+  --color-green: #66796b;
+  --color-white-new: #f5f5f5;
+  --color-black-new: #1b1b1b;
+  --default-font-family: var(--font-nunito);
 }
 
 .h-screen-new {
   height: calc(100vh - 80px);
-}
-
-.bg-green-highlight {
-  background-color: #66796b;
-}
-
-.bg-white-new {
-  background-color: #f5f5f5;
-}
-
-.text-white-new {
-  color: #f5f5f5;
-}
-
-.color-black-new {
-  color: #1b1b1b;
 }
 
 .text-title {

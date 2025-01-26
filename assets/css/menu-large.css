@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+.main-menu {
+  display: none;
+}
+
+.main-menu--nav-bar {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+  .main-menu {
+    display: flex;
+    flex-flow: row nowrap;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: 1px solid #1b1b1b;
+    padding: 0.5rem;
+    z-index: 10;
+    background-color: #f5f5f5;
+  }
+  .main-menu__nav-bar {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 2rem;
+    align-items: center;
+    font-size: 1.2rem;
+    margin-left: 5vw;
+  }
+  .main-menu__nav-bar > a {
+    color: #1b1b1b;
+    font-weight: 600;
+  }
+  .nav__lang-select {
+    width: 7rem;
+    height: 3.3rem;
+    font-size: 1rem;
+    margin-right: 5vw;
+  }
+  .main-content {
+    margin-top: 4.3rem;
+  }
+  .main-content__hero,
+  .main-content__about {
+    height: calc(100vh - 69px);
+  }
+}/*# sourceMappingURL=menu-large.css.map */

@@ -1,67 +1,68 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="font-family-nunito">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="shortcut icon" href="assets/img/icons/favicon.svg" type="image/x-icon">
-    <link rel="stylesheet" href="src/output.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/menu-large.css">
+    <!-- <link rel="stylesheet" href="src/output.css"> -->
     <!-- <link rel="stylesheet" href="src/input.css"> -->
     <script src="assets/js/script.js" defer></script>
 </head>
 
-<body class="min-h-screen bg-white-new scroll-smooth">
-    <header aria-label="main menu"
-        class="bg-white-new fixed top-0 w-screen p-6 border-b border-b-black hidden md:flex flex-row justify-between">
-
-        <nav class="text-xl flex flex-row gap-10" aria-label="main">
-            <a class="" href="#home">Home</a>
-            <a class="" href="#about">About me</a>
-            <a class="" href="#projects">My projects</a>
-            <a class="" href="#contact">Contact</a>
+<body>
+    <header id="main-menu" class="main-menu" aria-label="main menu">
+        <nav class="main-menu__nav-bar" aria-label="main">
+            <a href="#home">Home</a>
+            <a href="#about">About me</a>
+            <a href="#projects">My projects</a>
+            <a href="#contact">Contact</a>
         </nav>
 
-        <select class="" aria-label="Select your language">
-            <option lang="en" value="english">English</option>
-            <option lang="pt" value="português">Português</option>
+        <select id="lang-select" class="nav__lang-select" aria-label="Select your language">
+            <option id="en-lang" lang="en" value="English">English</option>
+            <option id="pt-lang" lang="pt" value="Português">Português</option>
         </select>
     </header>
 
-    <header aria-label="mobile menu" class="bg-white-new fixed top-0 w-screen p-6 md:hidden flex-col">
-        <button class="block float-left" id="openBtn">
-            <img class="size-10 cursor-pointer" src="assets/img/buttons/menu.svg" alt="">
-        </button>
-
-        <nav id="mobileMenu" class="hidden flex-col items-center justify-start min-h-screen text-xl"
-            aria-label="mobile">
-
-            <button class="self-start" id="closeBtn">
-                <img class="size-10 cursor-pointer" src="assets/img/buttons/close.svg" alt="">
+    <header class="mobile-menu" aria-label="mobile menu">
+        <section class="mobile-menu__open-btn--flex" id="open-btn">
+            <button class="mobile-menu__open-btn">
+                <img src="assets/img/buttons/menu.svg" alt="">
             </button>
-            <section id="menuLinks" class="flex flex-col justify-center">
-                <a class="font-bold p-6 w-full text-center" href="#home">Home</a>
-                <a class="font-extrabold p-6 w-full text-center" href="#about">About me</a>
-                <a class="font-bold p-6 w-full text-center" href="#projects">My projects</a>
-                <a class="font-bold p-6 w-full text-center" href="#contact">Contact me</a>
+        </section>
+
+        <nav id="mobile-menu" class="mobile-menu__nav-dropdown--flex" aria-label="mobile nav">
+            <button class="nav-dropdown__close-btn" id="close-btn">
+                <img src="assets/img/buttons/close.svg" alt="">
+            </button>
+
+            <section id="menu-links" class="nav-dropdown__links">
+                <a href="#home">Home</a>
+                <a href="#about">About me</a>
+                <a href="#projects">My projects</a>
+                <a href="#contact">Contact me</a>
             </section>
-            <select id="langSelect" class="p-6 border border-black rounded-xl" aria-label="Select your language">
-                <option id="enLang" lang="en" value="english" onclick="load">English</option>
-                <option id="ptLang" lang="pt" value="português">Português</option>
+            <select id="lang-select" class="nav__lang-select" aria-label="Select your language">
+                <option id="en-lang" lang="en" value="English">English</option>
+                <option id="pt-lang" lang="pt" value="Português">Português</option>
             </select>
         </nav>
     </header>
 
-    <main class="max-w-4xl">
-        <section class="bg-green flex flex-col justify-center items-center p-2.5 sm:w-1/2 h-screen">
-            <h1 class="text-white-new md:text-6xl">Hi, welcome to my portfolio</h1>
-            <p class="text-white-new text-xl">Here you can know a little about me and explore my projects.<br>
+    <main class="main-content">
+        <section id="home" class="main-content__hero">
+            <h1 class="hero--h1">Hi, welcome to my portfolio!</h1>
+            <p class="hero--p">Here you can know a little about me and explore my projects.<br>
                 I'm open to new opportunities and collaborations, so feel free to reach out!</p>
         </section>
 
-        <section id="about" class="about">
-            <h2>About me</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam mollitia dignissimos placeat, molestias
+        <section id="about" class="main-content__about">
+            <h2 class="about--h2">About me</h2>
+            <p class="about--p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam mollitia dignissimos placeat, molestias
                 totam quae tempora impedit quidem odio temporibus accusamus provident nihil nesciunt assumenda maiores,
                 aperiam nisi consectetur, magnam atque velit in ex. Dolor itaque enim autem incidunt deserunt expedita,
                 repudiandae accusamus laudantium odio unde libero ullam exercitationem ea voluptas nulla consequuntur
@@ -70,9 +71,17 @@
                 fugiat minus natus eaque ipsam at? Tenetur ut repellendus laboriosam accusamus! Cupiditate laudantium
                 rerum ratione eius cumque repellendus velit nisi, fugiat veniam est!</p>
 
-            <h3>Skills</h3>
+            <h3 class="about--h3">Skills</h3>
+            <section class="about__skills">
+                <div class="about__skills--card"><img src="" alt=""></div>
+                <div class="about__skills--card"><img src="" alt=""></div>
+                <div class="about__skills--card"><img src="" alt=""></div>
+                <div class="about__skills--card"><img src="" alt=""></div>
+                <div class="about__skills--card"><img src="" alt=""></div>
+                <div class="about__skills--card"><img src="" alt=""></div>
+            </section>
         </section>
-        <section id="projects">
+        <!--<section id="projects">
             <h2>My projects</h2>
             <ul>
                 <li><a href="https://ansomething.github.io/recipe-page/" target="_blank">Recipe Page</a></li>
@@ -86,16 +95,16 @@
 
         <section id="contact">
 
-        </section>
+        </section> -->
     </main>
-    <footer class="social">
+    <!-- <footer class="social">
         <p>Connect with me</p>
         <ul class="social__links">
             <li class="icon--github"><a href="https://github.com/ansomething" target="_blank">GitHub</a></li>
             <li class="icon--linkedin"><a href="https://www.linkedin.com/in/andressa-vieira-41876532a/"
                     target="_blank">LinkedIn</a></li>
         </ul>
-    </footer>
+    </footer> -->
 </body>
 
 </html>
