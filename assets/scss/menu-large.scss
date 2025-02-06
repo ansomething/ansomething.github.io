@@ -1,4 +1,4 @@
-@use "root";
+@use "root" as *;
 
 .main-menu {
   display: none;
@@ -36,19 +36,7 @@
     font-weight: 600;
   }
 
-  // .nav__lang-select {
-  //     width: 7rem;
-  //     height: 3.3rem;
-  //     font-size: $TEXT-SMALL;
-  //     margin-right: 5vw;
-  // }
-
-  //   .main-content {
-  //     margin-top: 4.3rem;
-  //   }
-
-  .main-content__hero,
   .main-content__about {
-    height: calc(100vh - 6em);
+    scroll-margin-top: 2rem;
   }
 }

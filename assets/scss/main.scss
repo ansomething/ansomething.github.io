@@ -1,8 +1,7 @@
-/* || VARIABLES */
-@use "root";
-@use "reset";
+@use "index" as *;
 
-/* || RESET */
+/* || VARIABLES AND RESET */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 
 /* || GENERAL STYLE */
 html {
@@ -16,7 +15,6 @@ body {
   font-family: $MAIN-FONT;
   background-color: $WHITE;
   color: $BLACK;
-
   min-height: 100vh;
 }
 
@@ -58,29 +56,20 @@ body {
   justify-content: center;
 }
 
-// .nav__lang-select {
-//     padding: 1rem;
-//     border: 1px solid $BLACK;
-//     border-radius: 15px;
-//     width: 10rem;
-//     height: 4rem;
-//     font-size: $TEXT-SMALL;
-// }
-
 .main-content__hero {
   background-color: $GREEN;
   text-align: center;
   color: $WHITE;
-  height: calc(100vh - 6em);
+  height: 100vh;
   @include FLEX-COL-NOWRAP;
   justify-content: center;
   scroll-margin-top: 6rem;
 }
 
 .main-content__about {
-  height: calc(100vh - 6em);
+  height: 100vh;
   @include FLEX-COL-NOWRAP;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   scroll-margin-top: 6rem;
 }
@@ -89,6 +78,13 @@ body {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+}
+
+.main-content__projects {
+  height: 100vh;
+  @include FLEX-COL-NOWRAP;
+  align-items: center;
+  scroll-margin-top: 4rem;
 }
 
 /* || MODIFIERS */
@@ -100,7 +96,7 @@ body {
 
 .nav-dropdown__links > a {
   @include LINKS-MOBILE-MENU;
-  font-size: $MAIN-TITLE-LARGE;
+  font-size: $MENU-LINK;
 }
 
 .mobile-menu__nav-dropdown--hidden {
@@ -126,29 +122,30 @@ body {
 }
 
 .hero--h1 {
-  font-size: unquote($H1);
+  font-size: $H1-SIZE;
   padding: 2em;
   padding-top: 0;
 }
 
 .hero--p {
-  font-size: $TEXT-LARGE;
+  font-size: $TEXT-SIZE;
   padding: 0 2em;
 }
 
-.about--h2 {
-  font-size: $MAIN-TITLE-MEDIUM;
+.about--h2,
+.projects--h2 {
+  font-size: $H2-SIZE;
   padding: 1em;
 }
 
 .about--p {
-  font-size: $TEXT-MEDIUM;
+  font-size: $TEXT-SIZE;
   width: 80%;
   text-align: justify;
 }
 
 .about--h3 {
-  font-size: $MAIN-TITLE-SMALL;
+  font-size: $H3-SIZE;
 }
 
 .skills--card {
