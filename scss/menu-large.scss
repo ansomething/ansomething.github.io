@@ -1,41 +1,52 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@use "root";
+
 .main-menu {
   display: none;
 }
 
 .main-menu--nav-bar {
-  display: flex;
-  flex-flow: row nowrap;
+  @include FLEX-ROW-NOWRAP;
 }
 
 @media screen and (min-width: 768px) {
   .mobile-menu {
     display: none;
   }
+
   .main-menu {
-    display: flex;
-    flex-flow: row nowrap;
-    position: fixed;
-    top: 0;
-    width: 100%;
+    @include FLEX-ROW-NOWRAP;
+    @include NAV-HEADER;
     justify-content: space-between;
-    border-bottom: 1px solid #1b1b1b;
+    border-bottom: 1px solid $BLACK;
     padding: 1.6em;
     z-index: 10;
-    background-color: #f5f5f5;
+    background-color: $WHITE;
   }
+
   .main-menu__nav-bar {
-    display: flex;
-    flex-flow: row nowrap;
+    @include FLEX-ROW-NOWRAP;
     gap: 2em;
     align-items: center;
-    font-size: 2rem;
+    font-size: $TEXT-LARGE;
     margin-left: 5vw;
   }
+
   .main-menu__nav-bar > a {
-    color: #1b1b1b;
+    color: $BLACK;
     font-weight: 600;
   }
+
+  // .nav__lang-select {
+  //     width: 7rem;
+  //     height: 3.3rem;
+  //     font-size: $TEXT-SMALL;
+  //     margin-right: 5vw;
+  // }
+
+  //   .main-content {
+  //     margin-top: 4.3rem;
+  //   }
+
   .main-content__hero,
   .main-content__about {
     height: calc(100vh - 6em);

@@ -1,92 +1,105 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <link rel="shortcut icon" href="assets/img/icons/favicon.svg" type="image/x-icon">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/menu-large.css">
-    <!-- <link rel="stylesheet" href="src/output.css"> -->
-    <!-- <link rel="stylesheet" href="src/input.css"> -->
-    <script src="assets/js/script.js" defer></script>
-</head>
+    <link
+      rel="shortcut icon"
+      href="assets/img/icons/favicon.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
 
-<body>
+    <!-- media query -->
+    <link rel="stylesheet" href="assets/css/menu-large.css" />
+
+    <script src="assets/js/main.js" defer></script>
+  </head>
+
+  <body>
     <header id="main-menu" class="main-menu" aria-label="main menu">
-        <nav class="main-menu__nav-bar" aria-label="main">
-            <a href="#home">Home</a>
-            <a href="#about">About me</a>
-            <a href="#projects">My projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
+      <nav class="main-menu__nav-bar" aria-label="main">
+        <a href="#home">Home</a>
+        <a href="#about">About me</a>
+        <a href="#projects">My projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-        <select id="lang-select" class="nav__lang-select" aria-label="Select your language">
+      <!-- <select id="lang-select" class="nav__lang-select" aria-label="Select your language">
             <option id="en-lang" lang="en" value="English">English</option>
             <option id="pt-lang" lang="pt" value="Português">Português</option>
-        </select>
+        </select> -->
     </header>
 
     <header class="mobile-menu" aria-label="mobile menu">
-        <section class="mobile-menu__open-btn--flex" id="open-btn">
-            <button class="mobile-menu__open-btn">
-                <img src="assets/img/buttons/menu.svg" alt="">
-            </button>
-        </section>
+      <section class="mobile-menu__open-btn--flex" id="open-btn">
+        <button class="mobile-menu__open-btn" aria-label="open menu">
+          <img src="assets/img/menu.svg" alt="" />
+        </button>
+      </section>
 
-        <nav id="mobile-menu" class="mobile-menu__nav-dropdown--flex" aria-label="mobile nav">
-            <button class="nav-dropdown__close-btn" id="close-btn">
-                <img src="assets/img/buttons/close.svg" alt="">
-            </button>
+      <nav id="mobile-menu" class="mobile-menu__nav-dropdown--hidden">
+        <button
+          class="nav-dropdown__close-btn"
+          id="close-btn"
+          aria-label="close menu"
+        >
+          <img src="assets/img/close.svg" alt="" />
+        </button>
 
-            <section id="menu-links" class="nav-dropdown__links">
-                <a href="#home">Home</a>
-                <a href="#about">About me</a>
-                <a href="#projects">My projects</a>
-                <a href="#contact">Contact me</a>
-            </section>
-            <select id="lang-select" class="nav__lang-select" aria-label="Select your language">
-                <option id="en-lang" lang="en" value="English">English</option>
-                <option id="pt-lang" lang="pt" value="Português">Português</option>
-            </select>
-        </nav>
+        <div id="menu-links" class="nav-dropdown__links">
+          <a href="#home">Home</a>
+          <a href="#about">About me</a>
+          <a href="#projects">My projects</a>
+          <a href="#contact">Contact me</a>
+        </div>
+      </nav>
     </header>
 
     <main class="main-content">
-        <section id="home" class="main-content__hero">
-            <h1 class="hero--h1">Hi, welcome to my portfolio!</h1>
-            <p class="hero--p">Here you can know a little about me and explore my projects.<br>
-                I'm open to new opportunities and collaborations, so feel free to reach out!</p>
-        </section>
+      <section id="home" class="main-content__hero">
+        <h1 class="hero--h1">Hi, welcome to my portfolio!</h1>
+        <p class="hero--p">
+          Here you can know a little about me and explore my projects.<br />
+          I'm open to new opportunities and collaborations, so feel free to
+          reach out!
+        </p>
+      </section>
 
-        <section id="about" class="main-content__about">
-            <h2 class="about--h2">About me</h2>
-            <p class="about--p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam mollitia dignissimos placeat, molestias
-                totam quae tempora impedit quidem odio temporibus accusamus provident nihil nesciunt assumenda maiores,
-                aperiam nisi consectetur, magnam atque velit in ex. Dolor itaque enim autem incidunt deserunt expedita,
-                repudiandae accusamus laudantium odio unde libero ullam exercitationem ea voluptas nulla consequuntur
-                voluptatum esse. Praesentium delectus voluptatem temporibus similique autem enim officiis facilis
-                exercitationem ab velit distinctio consequuntur laborum nobis iure hic inventore maiores ipsa deserunt,
-                fugiat minus natus eaque ipsam at? Tenetur ut repellendus laboriosam accusamus! Cupiditate laudantium
-                rerum ratione eius cumque repellendus velit nisi, fugiat veniam est!</p>
+      <section id="about" class="main-content__about">
+        <h2 class="about--h2">About me</h2>
+        <p class="about--p">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+          mollitia dignissimos placeat, molestias totam quae tempora impedit
+          quidem odio temporibus accusamus provident nihil nesciunt assumenda
+          maiores, aperiam nisi consectetur, magnam atque velit in ex. Dolor
+          itaque enim autem incidunt deserunt expedita, repudiandae accusamus
+          laudantium odio unde libero ullam exercitationem ea voluptas nulla
+          consequuntur voluptatum esse. Praesentium delectus voluptatem
+          temporibus similique autem enim officiis facilis exercitationem ab
+          velit distinctio consequuntur laborum nobis iure hic inventore maiores
+          ipsa deserunt, fugiat minus natus eaque ipsam at? Tenetur ut
+          repellendus laboriosam accusamus! Cupiditate laudantium rerum ratione
+          eius cumque repellendus velit nisi, fugiat veniam est!
+        </p>
 
-            <h3 class="about--h3">Skills</h3>
-            <section class="about__skills">
-                <div class="about__skills--card"><img src="" alt=""></div>
-                <div class="about__skills--card"><img src="" alt=""></div>
-                <div class="about__skills--card"><img src="" alt=""></div>
-                <div class="about__skills--card"><img src="" alt=""></div>
-                <div class="about__skills--card"><img src="" alt=""></div>
-                <div class="about__skills--card"><img src="" alt=""></div>
-            </section>
+        <h3 class="about--h3">Skills</h3>
+        <section class="about__skills">
+          <div class="skills--card"><img src="" alt="" /></div>
+          <div class="skills--card"><img src="" alt="" /></div>
+          <div class="skills--card"><img src="" alt="" /></div>
+          <div class="skills--card"><img src="" alt="" /></div>
+          <div class="skills--card"><img src="" alt="" /></div>
+          <div class="skills--card"><img src="" alt="" /></div>
         </section>
-        <!--<section id="projects">
+      </section>
+      <!--<section id="projects">
             <h2>My projects</h2>
             <ul>
                 <li><a href="https://ansomething.github.io/recipe-page/" target="_blank">Recipe Page</a></li>
+                <li><a href="#" target="_blank">To-Do List</a></li>
                 <li><a href="#" target="_blank">Login Page</a></li>
-                <li><a href="#" target="_blank">#</a></li>
                 <li><a href="#" target="_blank">#</a></li>
                 <li><a href="#" target="_blank">#</a></li>
                 <li><a href="#" target="_blank">#</a></li>
@@ -105,6 +118,5 @@
                     target="_blank">LinkedIn</a></li>
         </ul>
     </footer> -->
-</body>
-
+  </body>
 </html>
