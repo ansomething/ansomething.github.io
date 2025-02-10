@@ -40,6 +40,11 @@ body {
   cursor: pointer;
   padding: 0.8em;
   background-color: $WHITE;
+
+  img {
+    width: $BTN-MENU;
+    height: $BTN-MENU;
+  }
 }
 
 .nav-dropdown__close-btn {
@@ -49,11 +54,21 @@ body {
   top: 0;
   padding: 0.8em;
   background-color: $WHITE;
+
+  img {
+    width: $BTN-MENU;
+    height: $BTN-MENU;
+  }
 }
 
 .nav-dropdown__links {
   @include FLEX-COL-NOWRAP;
   justify-content: center;
+
+  a {
+    @include LINKS-MOBILE-MENU;
+    font-size: $MENU-LINK;
+  }
 }
 
 .main-content__hero {
@@ -67,17 +82,19 @@ body {
 }
 
 .main-content__about {
-  height: 100vh;
+  min-height: 100vh;
   @include FLEX-COL-NOWRAP;
-  justify-content: space-evenly;
   align-items: center;
+  gap: 3em;
   scroll-margin-top: 6rem;
 }
 
 .about__skills {
-  display: flex;
-  flex-flow: row wrap;
+  @include FLEX-ROW-NOWRAP;
+  flex-wrap: wrap;
   justify-content: center;
+  margin-top: 1.8em;
+  gap: clamp(1em, 3vw, 4em);
 }
 
 .main-content__projects {
@@ -87,18 +104,42 @@ body {
   scroll-margin-top: 4rem;
 }
 
+.projects__list {
+  columns: 2;
+  list-style-position: inside;
+  list-style-type: disc;
+  font-size: $TEXT-SIZE;
+
+  li {
+    padding: 1em;
+
+    a:hover,
+    a:focus {
+      text-decoration: underline;
+    }
+
+    :last-child {
+      font-size: smaller;
+    }
+  }
+}
+
+.main-content__contact {
+  height: 100vh;
+  scroll-margin-top: 6rem;
+  @include FLEX-COL-NOWRAP;
+  align-items: center;
+}
+
+.contact__links {
+  list-style-type: none;
+  list-style-position: inside;
+  @include FLEX-COL-NOWRAP;
+  align-items: center;
+  gap: clamp(1em, 3vw, 4em);
+}
+
 /* || MODIFIERS */
-.mobile-menu__open-btn > img,
-.nav-dropdown__close-btn > img {
-  width: $BTN-MENU;
-  height: $BTN-MENU;
-}
-
-.nav-dropdown__links > a {
-  @include LINKS-MOBILE-MENU;
-  font-size: $MENU-LINK;
-}
-
 .mobile-menu__nav-dropdown--hidden {
   display: none;
 }
@@ -133,24 +174,53 @@ body {
 }
 
 .about--h2,
-.projects--h2 {
+.projects--h2,
+.contact--h2 {
   font-size: $H2-SIZE;
   padding: 1em;
+  margin-top: 1em;
 }
 
 .about--p {
   font-size: $TEXT-SIZE;
   width: 80%;
   text-align: justify;
-}
 
-.about--h3 {
-  font-size: $H3-SIZE;
+  a {
+    font-weight: bold;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
 }
 
 .skills--card {
-  min-width: 100px;
-  min-height: 100px;
-  border: 1px solid $BLACK;
-  margin: 1rem;
+  @include FLEX-COL-NOWRAP;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  height: 10rem;
+  box-shadow: $BOXSHADOW-CARD;
+  margin-top: 2em;
+
+  img {
+    padding: 1.5em;
+  }
+}
+
+.icon--github,
+.icon--linkedin,
+.icon--discord {
+  a {
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  img {
+    width: $ICON-SOCIAL;
+  }
 }
