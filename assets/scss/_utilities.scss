@@ -1,0 +1,45 @@
+@use "variables" as var;
+
+@each $key, $value in var.$paddings {
+  .padding-top-#{$key} {
+    padding-top: $value;
+  }
+  .padding-bottom-#{$key} {
+    padding-bottom: $value;
+  }
+  .padding-left-#{$key} {
+    padding-left: $value;
+  }
+  .padding-right-#{$key} {
+    padding-right: $value;
+  }
+  .padding-#{$key} {
+    padding: $value;
+  }
+}
+
+@each $key, $value in var.$margins {
+  .margin-top-#{$key} {
+    margin-top: $value;
+  }
+  .margin-bottom-#{$key} {
+    margin-bottom: $value;
+  }
+  .margin-left-#{$key} {
+    margin-left: $value;
+  }
+  .margin-right-#{$key} {
+    margin-right: $value;
+  }
+  .margin-#{$key} {
+    margin: $value;
+  }
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-weight: 600;
+}

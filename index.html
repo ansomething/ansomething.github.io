@@ -1,175 +1,157 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <link
-      rel="shortcut icon"
-      href="assets/img/favicon.svg"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" href="assets/css/main.css" />
+<html lang="pt-br">
 
-    <!-- media query for the menu -->
-    <link rel="stylesheet" href="assets/css/menu-large.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andressa V. Cavalcante</title>
+    <link rel="shortcut icon" href="assets/ico.svg" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- Scripts para envio do email -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "bYaBYM9E-fmvw_zO5",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                emailjs.sendForm("service_1ni732n", "template_2tqmqpw", this)
+                    .then(() => {
+                        alert("E-mail enviado!");
+                        console.log("SUCESSO");
+                        document.getElementById("contact-form").reset();
+                    }, (error) => {
+                        console.log('FALHA:', error);
+                    });
+            });
+        }
+    </script>
+</head>
 
-    <script src="assets/js/main.js" defer></script>
-  </head>
+<body>
+    <!-- Página Inicial -->
+    <section class="flex-col-evenly height-100 bg-black padding-top-100">
+        <h1 class="font-40 text-white text-center padding-right-20 padding-left-20">Olá, seja bem vindo ao
+            meu <span class="text-pink">portfólio</span>.
+        </h1>
+        <div class="flex-row-center">
+            <a class="text-white text-hover-pink font-25" href="https://github.com/ansomething"
+                target="_blank">GitHub</a>
+            <a class="text-white text-hover-pink font-25" href="https://www.linkedin.com/in/andressa-vc/"
+                target="_blank">LinkedIn</a>
+    </section>
 
-  <body>
-    <header id="main-menu" class="main-menu" aria-label="main menu">
-      <nav class="main-menu__nav-bar" aria-label="main">
-        <a href="#home">Home</a>
-        <a href="#about">About me</a>
-        <a href="#projects">My projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
+    <!-- Página de Habilidades -->
+    <section class="height-100 padding-top-60 padding-bottom-60">
+        <h2 class="font-30 text-center padding-bottom-30 padding-top-10">&lt; Habilidades &gt;</h2>
+        <div class="grid-container">
 
-      <!-- <select id="lang-select" class="nav__lang-select" aria-label="Select your language">
-            <option id="en-lang" lang="en" value="English">English</option>
-            <option id="pt-lang" lang="pt" value="Português">Português</option>
-        </select> -->
-    </header>
+            <div class="card padding-20">
+                <h3 class="text-left font-25 text-pink">Linguagens</h3>
+                <ul class="font-15 padding-10">
+                    <li class="padding-bottom-5">Python</li>
+                    <li class="padding-bottom-5">SQL (MySQL)</li>
+                    <li class="padding-bottom-5">JavaScript</li>
+                    <li class="padding-bottom-5">HTML5</li>
+                    <li class="padding-bottom-5">CSS3</li>
+                    <li class="padding-bottom-5">Sass</li>
+                </ul>
+            </div>
 
-    <header class="mobile-menu" aria-label="mobile menu">
-      <section class="mobile-menu__open-btn--flex" id="open-btn">
-        <button class="mobile-menu__open-btn" aria-label="open menu">
-          <img src="assets/img/bars.svg" alt="" />
-        </button>
-      </section>
+            <div class="card padding-20">
+                <h3 class="text-left font-25 text-pink">Versionamento e IDEs</h3>
+                <ul class="font-15 padding-10">
+                    <li class="padding-bottom-5">Git</li>
+                    <li class="padding-bottom-5">VS Code</li>
+                </ul>
+            </div>
 
-      <nav id="mobile-menu" class="mobile-menu__nav-dropdown--hidden">
-        <button
-          class="nav-dropdown__close-btn"
-          id="close-btn"
-          aria-label="close menu"
-        >
-          <img src="assets/img/xmark.svg" alt="" />
-        </button>
-
-        <div id="menu-links" class="nav-dropdown__links">
-          <a href="#home">Home</a>
-          <a href="#about">About me</a>
-          <a href="#projects">My projects</a>
-          <a href="#contact">Contact me</a>
+            <div class="card padding-20">
+                <h3 class="text-left font-25 text-pink">Comportamentais e Idiomas</h3>
+                <ul class="font-15 padding-10">
+                    <li class="padding-bottom-5">Proatividade</li>
+                    <li class="padding-bottom-5">Trabalho em equipe</li>
+                    <li class="padding-bottom-5">Resolução de problemas</li>
+                    <li class="padding-bottom-5">Interesse em aprender</li>
+                    <li class="padding-bottom-5">Inglês - B1</li>
+                </ul>
+            </div>
         </div>
-      </nav>
-    </header>
+    </section>
 
-    <main class="main-content">
-      <section id="home" class="main-content__hero">
-        <h1 class="hero--h1">Hi, welcome to my portfolio!</h1>
-        <p class="hero--p">
-          Here you can know a little about me and explore my projects.<br />
-          I'm open to new opportunities and collaborations, so feel free to
-          reach out!
-        </p>
-      </section>
+    <!-- Página de Projetos -->
+    <section class="height-100 padding-top-60 padding-bottom-60 bg-pink">
+        <h2 class="font-30 text-center padding-bottom-30 padding-top-10">&lt; Projetos &gt;</h2>
+        <div class="grid-container">
+            <div class="card padding-20 bg-white">
+                <h3 class="text-left font-25 text-pink">Portfólio Pessoal</h3>
+                <p class="font-15">Esse site que está acessando! &hearts;</p>
+                <ul class="font-15 padding-10">
+                    <li class="padding-bottom-5">HTML5</li>
+                    <li class="padding-bottom-5">Sass</li>
+                </ul>
+            </div>
+            <div class="card padding-20 bg-white">
+                <h3 class="text-left font-25 text-pink">To-Do List</h3>
+                <p class="font-15">Lista de tarefas que salva os dados no local storage do navegador.</p>
+                <ul class="font-15 padding-10">
+                    <li class="padding-bottom-5">HTML5</li>
+                    <li class="padding-bottom-5">CSS3</li>
+                    <li class="padding-bottom-5">JavaScript</li>
+                </ul>
+                <br>
+                <hr>
+                <br>
+                <a href="https://github.com/ansomething/to-do-list" target="_blank" class="text-black text-hover-pink font-15">Repositório</a>
+            </div>
+            <div class="card padding-20 bg-white">
+                <h3 class="text-left font-25 text-pink">Gerador de Senhas</h3>
+                <p class="font-15">O usuário pode gerar uma senha de 12 dígitos (letras, números e símbolos)
+                    pelo terminal ou usando a interface gráfica.</p>
+                <ul class="font-15 padding-10">
+                    <li class="padding-bottom-5">Python</li>
+                    <li class="padding-bottom-5">Kivy</li>
+                </ul>
+                <hr>
+                <br>
+                <a href="https://github.com/ansomething/gerador-de-senhas" target="_blank"
+                    class="text-black text-hover-pink font-15">Repositório</a>
+            </div>
+        </div>
+    </section>
 
-      <section id="about" class="main-content__about">
-        <h2 class="about--h2">About me</h2>
-        <p class="about--p">
-          I'm 23 years old and from Brazil. I love mystery and mythology books
-          besides loving technology and learning new things. I've always been
-          detail-oriented and my ability to solve problems has followed me since
-          I was a child. I'm focused on learning new languages and concepts to
-          improve my technical skills and become a specialist.
-        </p>
-        <p class="about--p">
-          Below you can see some of the languages I've been learning and on the
-          <a href="#projects">Projects</a> section you can access my projects on
-          GitHub pages as well as my GitHub profile for the repositories.
-        </p>
+    <!-- Página de Contato -->
+    <section class="height-100 bg-black padding-top-60 padding-bottom-60">
+        <h2 class="text-center text-white font-30 padding-bottom-10">&lt; Contato &gt;</h2>
+        <form enctype="text/plain" class="flex-col-center" id="contact-form">
+            <p>
+                <input id="name" type="text" name="name" placeholder="Nome"
+                    class="padding-10 margin-top-10 input-size font-15" required>
+            </p>
+            <p>
+                <input id="email" type="email" name="email" placeholder="E-mail"
+                    class="padding-10 margin-top-10 input-size font-15" required>
+            </p>
+            <p>
+                <input id="subject" type="text" name="subject" placeholder="Assunto"
+                    class="padding-10 margin-top-10 input-size font-15" required>
+            </p>
+            <p>
+                <textarea id="message" cols="30" rows="10" name="message" placeholder="Mensagem" required
+                    class="padding-10 margin-top-10 input-size font-15"></textarea>
+            </p>
+            <p>
+                <input type="submit" value="ENVIAR"
+                    class="padding-10 margin-top-10 btn bg-white text-hover-white bg-hover-pink">
+            </p>
+        </form>
+    </section>
 
-        <section class="about__skills">
-          <div class="skills--card">
-            <img src="assets/img/brands/html5.svg" alt="" />
-          </div>
-          <div class="skills--card">
-            <img src="assets/img/brands/css3-alt.svg" alt="" />
-          </div>
-          <div class="skills--card">
-            <img src="assets/img/brands/sass.svg" alt="" />
-          </div>
-          <div class="skills--card">
-            <img src="assets/img/brands/js.svg" alt="" />
-          </div>
-          <div class="skills--card">
-            <img src="assets/img/brands/python.svg" alt="" />
-          </div>
-        </section>
-      </section>
+</body>
 
-      <section id="projects" class="main-content__projects">
-        <h2 class="projects--h2">My projects</h2>
-        <ul class="projects__list">
-          <li>
-            <a href="https://ansomething.github.io/recipe-page/" target="_blank"
-              >Recipe Page</a
-            >
-            <a href="https://github.com/ansomething/recipe-page" target="_blank"
-              >[Repo]</a
-            >
-          </li>
-          <li>
-            <a href="https://ansomething.github.io/to-do-list/" target="_blank"
-              >To-Do List</a
-            >
-            <a href="https://github.com/ansomething/to-do-list" target="_blank"
-              >[Repo]</a
-            >
-          </li>
-          <li>
-            <a href="#projects">Coming soon</a>
-            <a href="#projects">[]</a>
-          </li>
-          <li>
-            <a href="#projects">Coming soon</a>
-            <a href="#projects">[]</a>
-          </li>
-          <li>
-            <a href="#projects">Coming soon</a>
-            <a href="#projects">[]</a>
-          </li>
-          <li>
-            <a href="#projects">Coming soon</a>
-            <a href="#projects">[]</a>
-          </li>
-        </ul>
-      </section>
-
-      <section id="contact" class="main-content__contact">
-        <h2 class="contact--h2">Connect with me!</h2>
-        <ul class="contact__links">
-          <li class="icon--github">
-            <img src="assets/img/brands/github.svg" alt="" />
-            <a href="https://github.com/ansomething" target="_blank">GitHub</a>
-          </li>
-          <li class="icon--linkedin">
-            <a href="https://www.linkedin.com/in/andressa-vc/" target="_blank">
-              <img src="assets/img/brands/linkedin.svg" alt="" />
-              LinkedIn</a
-            >
-          </li>
-          <li class="icon--discord">
-            <img src="assets/img/brands/discord.svg" alt="" />
-            <a href="" target="_blank">Discord</a>
-          </li>
-        </ul>
-      </section>
-    </main>
-    <!-- <footer class="social">
-        <p>Connect with me</p>
-        <ul class="social__links">
-            <li class="icon--github">
-              <a href="https://github.com/ansomething" target="_blank">GitHub</a>
-            </li>
-            <li class="icon--linkedin">
-              <a href="https://www.linkedin.com/in/andressa-vc/"
-                    target="_blank">LinkedIn</a>
-                  </li>
-        </ul>
-    </footer> -->
-  </body>
 </html>

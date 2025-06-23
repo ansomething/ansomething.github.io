@@ -1,0 +1,52 @@
+@use "variables" as var;
+
+.height-100 {
+  min-height: 100dvh;
+}
+
+.flex-row-center {
+  display: flex;
+  flex-direction: row;
+  gap: 5em;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-col-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-col-evenly {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 30em);
+  gap: 5em;
+  justify-content: center;
+
+  .card {
+    width: 30em;
+    min-height: 25em;
+    outline: 0.1em solid var.$black;
+    box-shadow: 0.5em 0.5em 0.5em var.$light-black;
+    border-radius: 0.5em;
+  }
+}
+
+.input-size {
+  width: 18em;
+}
+
+@media screen and (min-width: 768px) {
+  .input-size {
+    width: 25em;
+  }
+}

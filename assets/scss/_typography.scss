@@ -1,0 +1,13 @@
+@use "variables" as var;
+
+@each $key, $value in var.$text-align {
+  .text-#{$key} {
+    text-align: $value;
+  }
+}
+
+@each $key, $value in var.$font-sizes {
+  .font-#{$key} {
+    font-size: $value;
+  }
+}

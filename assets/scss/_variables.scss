@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+$main-font: "Nunito", serif;
+
+$colors: (
+  "black": #1b1b1b,
+  "white": #f5f5f5,
+  "pink": #f2a7a7,
+);
+
+$font-sizes: (
+  "40": 4rem,
+  "30": 3rem,
+  "25": 2.5rem,
+  "20": 2rem,
+  "15": 1.5rem,
+);
+
+$text-align: (
+  "center": center,
+  "left": left,
+  "right": right,
+);
+
+$paddings: (
+  "5": 0.5em,
+  "10": 1em,
+  "20": 2em,
+  "30": 3em,
+  "40": 4em,
+  "50": 5em,
+  "60": 6em,
+  "70": 7em,
+  "80": 8em,
+  "90": 9em,
+  "100": 10em,
+);
+
+$margins: (
+  "5": 0.5em,
+  "10": 1em,
+  "20": 2em,
+  "30": 3em,
+  "40": 4em,
+  "50": 5em,
+  "60": 6em,
+  "70": 7em,
+  "80": 8em,
+  "90": 9em,
+  "100": 10em,
+  "auto": auto,
+);
+
+$black: #1b1b1b;
+$light-black: #1b1b1b44;
+$white: #f5f5f5;
+$red: #8c2a3c;
+$pink: #f2a7a7;
